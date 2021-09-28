@@ -3,7 +3,8 @@ class Solution:
     # Function to find minimum number of pages.
     def find_pages(self, A, N, M):
 
-        dp = [[0 for i in range(N+1)] for i in range(M+1)]
+        dp = [[0 for i in range(N+1)] for i in range(M
+                                                     +1)]
         sum =0
         for j in range(1, N+1):
             sum += A[j-1]
