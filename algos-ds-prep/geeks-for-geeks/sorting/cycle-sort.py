@@ -9,6 +9,7 @@ class solution:
             pos = cs
             #Find out how many elements are smaller
             for i in range(cs+1, n):
+
                 if arr[i] < item:
                     pos +=1
             #Skip is this is already in correct position
