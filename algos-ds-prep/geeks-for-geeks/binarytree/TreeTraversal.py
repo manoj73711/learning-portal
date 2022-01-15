@@ -63,10 +63,10 @@ class Solution:
             while len(s1) > 0:
                 n1 = s1.pop()
                 lis.append(n1.val)
-                if n1.left is not None:
-                    s2.append(n1.left)
                 if n1.right is not None:
                     s2.append(n1.right)
+                if n1.left is not None:
+                    s2.append(n1.left)
 
             if len(lis) > 0:
                 result.append(list)

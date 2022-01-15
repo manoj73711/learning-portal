@@ -20,9 +20,9 @@ class Solution:
         for gap in range(3, n):
 
             for i in range(n):
-                if i + gap >= n:
-                    break
                 j = i + gap
+                if j >= n:
+                    break
                 dp[i][j] = max(arr[i] + min(dp[i + 2][j], dp[i + 1][j - 1]),
                                arr[j] + min(dp[i + 1][j - 1], dp[i][j - 2]))
             gap = gap + 1

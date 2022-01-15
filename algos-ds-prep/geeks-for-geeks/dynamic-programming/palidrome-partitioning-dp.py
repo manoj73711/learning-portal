@@ -9,9 +9,9 @@ def isPalindrome(x):
 
 
 def ppHelper(string, n):
-    dp = [[float('inf') for i in range(n + 1)] for i in range(n + 1)]
+    dp = [[float('inf') for i in range(n)] for i in range(n)]
 
-    for i in range(n + 1):
+    for i in range(n):
         dp[i][i] = 0
 
     for gap in range(1, n):

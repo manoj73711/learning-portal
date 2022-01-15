@@ -15,7 +15,8 @@ class Solution:
             print(que[0].data)
             node = que.pop()
 
-            # This is to print level by level in new line
+            # Thi
+            # s is to print level by level in new line
             if node is None:
                 print( / n)
                 que.append(None)

@@ -18,3 +18,32 @@ class Solution:
 
         return max_element
         # code here
+
+    #This solution is nlogn
+    def longestSubsequenceOptimized(self, a, n):
+
+        tail = [0*n]
+        len = 1
+        tail[0] = a[0]
+
+        for i in range(1, n):
+
+            if a[i] > tail[len-1]:
+                tail[len] = a[i]
+                len +=1
+            else:
+                c = self.ceilIdx(a, 0, len-1, a[i])
+                tail[c] = a[i]
+        return len
+
+    def ceilIdx(self, a, l, r, key):
+
+        while l < r:
+            m = (l + (l-r))/2
+            if a[m] >= key:
+                r = m
+            else:
+                l = m+1
+        return r
+
+
