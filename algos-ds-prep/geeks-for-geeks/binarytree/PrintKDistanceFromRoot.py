@@ -1,4 +1,4 @@
-class Node:
+dclass Node:
     def _init_(self, val):
         self.data = val
         self.left = None

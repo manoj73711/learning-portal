@@ -1,4 +1,4 @@
-# Definition for a binary tree node.
+ # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -29,6 +29,5 @@ class Solution:
         if treeInfo.nodeCount < k:
             treeInfo.nodeCount += 1
             treeInfo.nodeValue = root.val
-
-        self.kthSmallestUtil(root.right, k, treeInfo)
+            self.kthSmallestUtil(root.right, k, treeInfo)
 
